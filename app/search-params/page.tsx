@@ -17,10 +17,10 @@ const Page = async ({
   let movies: Movie[] = [];
 
   // Get Initial Data
-  const initialMoviesData = await db.Movie.findMany();
+  const initialMoviesData = await db.movie.findMany();
 
   // Search Function
-  const filteredMoviesData = await db.Movie.findMany({
+  const filteredMoviesData = await db.movie.findMany({
     where: {
       title: {
         contains: searchQuery,

@@ -7,7 +7,7 @@ import { cache } from "react";
 
 var movies: Movie[] = [];
 const Data = cache(async () => {
-  const item: Movie[] = await db.Movie.findMany();
+  const item: Movie[] = await db.movie.findMany();
   return item;
 });
 // const filter = cache(async (title: string) => {
