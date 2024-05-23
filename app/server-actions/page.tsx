@@ -28,7 +28,7 @@ export default async function Home() {
     "use server";
     console.log("searchHandler", searchQuery);
 
-    const filteredMoviesData = await prisma.Movie.findMany({
+    const filteredMoviesData = await db.movie.findMany({
       where: searchQuery
         ? {
             title: {
