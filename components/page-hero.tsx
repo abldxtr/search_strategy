@@ -1,7 +1,7 @@
 import Link from "next/link";
 // import { ArrowLeft } from "lucide-react";
 
-import { ProsAndCons } from "@/components/nav";
+import { MainNav } from "@/components/nav";
 
 import { buttonVariants } from "./ui/button";
 // import ProsAndConsItem from "./ui/prosandcons-item";
@@ -21,9 +21,9 @@ interface Props {
   type: "Local" | "Client" | "Server";
   title: string;
   description: string;
-  prosandcons?: ProsAndCons[] | undefined;
+  // prosandcons?: ProsAndCons[] | undefined;
 }
-const PageHero = ({ type, title, description, prosandcons }: Props) => {
+const PageHero = ({ type, title, description }: Props) => {
   return (
     <div className="pb-5 mt-10 mb-5 border-b border-dashed border-slate-100 dark:border-slate-600">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
