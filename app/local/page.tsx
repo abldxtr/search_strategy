@@ -34,7 +34,9 @@ const Page = () => {
 
   const searchHandler = useCallback(() => {
     const filteredData = initialList.filter((movie) => {
-      return movie.title.toLowerCase().includes(inputValue.toLowerCase());
+      if (movie.title !== null) {
+        return movie.title.toLowerCase().includes(inputValue.toLowerCase());
+      }
     });
 
     // let rusult = filteredData.map((item, i) => initialList.filter((it)=>item === it.title)).flat;
