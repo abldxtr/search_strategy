@@ -20,7 +20,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const Data = cache(async () => {
-    const item: Movie[] = await db.Movie.findMany();
+    const item: Movie[] = await db.movie.findMany();
     return item;
   });
 
